@@ -1,18 +1,22 @@
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  // const client_id = process.env.REACT_APP_SEAT_GEEK_CLIENT_ID;
+  // const app_key = process.env.REACT_APP_SEAT_GEEK_KEY;
+
+  useEffect(() => {
+    
+  });
+
   return (
-    <div className="App">
-      <header className="App-header bg-black bg-blend-darken">
-        <h1 className='text-4xl text-slate-300 animate-pulse'> React Template Repository with the following packages Pre-installed :</h1>      
-        <ol className='pt-5'>
-           <li>React Router (v5) </li>
-           <li>Tailwind CSS </li>
-            <li> Configuration to use a proxy server.</li>
-            <li>React start script modified to use openssl legacy provider.</li>
-        </ol>
-      
-      </header>
+    <div className="App text-2xl font-text">
+     <h1 className="font-headings text-6xl">
+        Hello There
+      </h1>
+      <p>
+        Slim Shady
+      </p>
     </div>
   );
 }
