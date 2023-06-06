@@ -6,7 +6,7 @@ import {
 
 
 export const useFetch = (url) => {
-	const [ stateItem, setStateItem ] = useState([]);
+	const [ stateItem, setStateItem ] = useState({});
 
 	const getItems = useCallback(async () => {
 		const response = await fetch(url);
