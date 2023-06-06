@@ -16,9 +16,9 @@ const performers_url = `https://api.seatgeek.com/2/performers?client_id=${client
 const events_url = `https://api.seatgeek.com/2/events?client_id=${client_id}&client_secret=${app_key}`
 
 function App() {
-  const { events } = useFetch(events_url);
-  const { perfomers } = useFetch(performers_url);
-  const { venues } = useFetch(venues_url);
+  const { stateItem: venues } = useFetch(venues_url);
+  const { stateItem: events } = useFetch(events_url);
+  const { stateItem: performers } = useFetch(performers_url);
 
   return (
     <div
@@ -27,7 +27,7 @@ function App() {
       tracking-tighter bg-gradient-to-b from-sky-100 via-sky-300 to-blue-400
       absolute w-screen items-center flex flex-col space-y-4 gap-4 will-change-scroll">
       <ApplicationContext.Provider
-        value={{ venues, events, perfomers, client_id, app_key }}>
+        value={{ venues, events, performers, client_id, app_key }}>
         <Paths />
       </ApplicationContext.Provider>
     </div>
