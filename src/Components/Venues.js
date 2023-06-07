@@ -1,7 +1,9 @@
 export function Venues(){
 	return (
 		<>
-			Venues Component 
+			<h1>
+				Venues Component
+			</h1>
 		</>
 	)
 }
