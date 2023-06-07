@@ -7,11 +7,17 @@ import {
 
 export const useFetch = (url) => {
 	const [ stateItem, setStateItem ] = useState({});
+	const [ loading, setLoading ] = useState(true);
 
 	const getItems = useCallback(async () => {
 		const response = await fetch(url);
 		const stateItem = await response.json();
-		setStateItem(stateItem);
+
+		setTimeout(() => {
+			setStateItem(stateItem);
+			setLoading(false);
+		},2000)
+
 	},[url]);
 
 
@@ -19,5 +25,5 @@ export const useFetch = (url) => {
 		getItems()
 	},[getItems, url])
 
-	return { stateItem };
+	return { stateItem, loading };
 }
