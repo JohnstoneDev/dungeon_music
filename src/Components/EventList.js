@@ -52,7 +52,7 @@ export const EventList = ({ events }) => {
 			animate={{ x: 1 }}
 			transition={{ ease: "easeIn", duration: 1, delay : 0.5 }}
 			className="space-x-3 space-y-4 gap-8 min-h-screen p-2 items-center justify-around
-			desktop:grid desktop:grid-cols-[repeat(3,400px)] tablet:grid tablet:grid-cols-2 relative scroll-smooth">
+			desktop:grid desktop:grid-cols-[repeat(4,400px)] tablet:grid tablet:grid-cols-2 relative scroll-smooth">
 			<AnimatePresence>
 				{
 					events.map((event) => {
