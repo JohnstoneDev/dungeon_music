@@ -18,7 +18,7 @@ const events_url = `https://api.seatgeek.com/2/events?client_id=${client_id}&cli
 
 export const Loading = () => {
   return (
-    <div className='text-center font-headings text-8xl'>
+    <div className='text-center font-headings text-8xl h-screen'>
       <h1> Loading Data ...</h1>
     </div>
   )
@@ -33,8 +33,8 @@ function App() {
   return (
       <div
         className
-        ="App text-2xl font-main text-gray-800 min-h-screen leading-loose bg-blend-darken
-        tracking-tighter bg-gradient-to-b from-sky-100 via-sky-300 to-blue-400
+        ="App text-2xl font-text text-gray-700 min-h-screen leading-loose bg-blend-darken
+        tracking-tighter bg-gradient-to-br from-purple-100 from-20% via-purple-200 via-50% to-indigo-300 to-90%
         absolute w-screen items-center">
         <ApplicationContext.Provider
           value={{ venues, events, performers, client_id, app_key }}>
