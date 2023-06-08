@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 
 import { ApplicationContext, Loading } from '../App'
 import { EventList } from './EventList'
@@ -16,13 +16,9 @@ export const Events = () => {
 
 	const [ loading, setLoading ] = useState(true);
 
-	const loadTimeout = setTimeout(() => {
+	setTimeout(() => {
 		setLoading(false)
-	},50)
-
-	useEffect(() => {
-		return clearTimeout(loadTimeout);
-	},[events, loadTimeout])
+	},2000)
 
 	return (
 		<>
