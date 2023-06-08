@@ -1,6 +1,6 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
-import { ApplicationContext } from '../App'
+import { ApplicationContext, Loading } from '../App'
 import { EventList } from './EventList'
 
 export const NoData = () => {
@@ -14,17 +14,19 @@ export const NoData = () => {
 export const Events = () => {
 	const { events } = useContext(ApplicationContext).events;
 
-	console.log(events);
+	const [ loading, setLoading ] = useState(true);
+
+	const loadTimeout = setTimeout(() => {
+		setLoading(false)
+	},50)
 
 	useEffect(() => {
-
-	},[events])
+		return clearTimeout(loadTimeout);
+	},[events, loadTimeout])
 
 	return (
 		<>
-			{
-				events.length > 0 ? <EventList event={events[0]}/> : <NoData />
-			}
+			{ loading ? <Loading className="text-4xl"/> : <EventList events={events}/>}
 		</>
 	)
 }
