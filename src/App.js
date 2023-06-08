@@ -37,7 +37,7 @@ function App() {
         tracking-tighter bg-gradient-to-br from-purple-100 from-20% via-purple-200 via-50% to-indigo-300 to-90%
         absolute w-screen items-center">
         <ApplicationContext.Provider
-          value={{ venues, events, performers, client_id, app_key }}>
+          value={{ venues, events, performers }}>
             {
               loading ?
               <Loading /> :
