@@ -9,12 +9,12 @@ import { Navigation } from './Components/Navigation';
 
 export const ApplicationContext = createContext();
 
-const client_id = process.env.REACT_APP_SEAT_GEEK_CLIENT_ID;
-const app_key = process.env.REACT_APP_SEAT_GEEK_KEY;
+export const client_id = process.env.REACT_APP_SEAT_GEEK_CLIENT_ID;
+export const app_key = process.env.REACT_APP_SEAT_GEEK_KEY;
 
-const venues_url = `https://api.seatgeek.com/2/venues?client_id=${client_id}&client_secret=${app_key}`
-const performers_url = `https://api.seatgeek.com/2/performers?client_id=${client_id}&client_secret=${app_key}`
-const events_url = `https://api.seatgeek.com/2/events?client_id=${client_id}&client_secret=${app_key}`
+export const venues_url = `https://api.seatgeek.com/2/venues?client_id=${client_id}&client_secret=${app_key}`
+export const performers_url = `https://api.seatgeek.com/2/performers?client_id=${client_id}&client_secret=${app_key}`
+export const events_url = `https://api.seatgeek.com/2/events?client_id=${client_id}&client_secret=${app_key}`
 
 export const Loading = () => {
   return (
