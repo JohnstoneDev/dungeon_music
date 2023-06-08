@@ -18,8 +18,10 @@ export const events_url = `https://api.seatgeek.com/2/events?client_id=${client_
 
 export const Loading = () => {
   return (
-    <div className='text-center font-headings text-8xl h-screen'>
-      <h1> Loading Data ...</h1>
+    <div className='text-center font-headings text-8xl h-full m-6 p-6'>
+      <h1 className='animate-pulse'>
+         Loading ...
+      </h1>
     </div>
   )
 }
