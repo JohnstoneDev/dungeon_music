@@ -22,7 +22,7 @@ export const Events = () => {
 
 	return (
 		<>
-			{ loading ? <Loading className="text-4xl"/> : <EventList events={events}/>}
+			{ loading ? <Loading /> : <EventList events={events}/>}
 		</>
 	)
 }
